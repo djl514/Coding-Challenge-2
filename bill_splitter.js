@@ -12,10 +12,17 @@ console.log(`The bill was $${check}, the tip was $${tip},
 //3. Create a Function calculateTip
 function calculateTip(bill){
     if (bill >= 50 && bill <=300){
-        return bill + bill*.15;
+        return bill*.15;
     } else{
-        return bill + bill*.2;
+        return bill*.2;
     }
 }
 
 console.log(`$${calculateTip(100)}`)
+
+//4. Utilize Arrays
+let bills = [125, 555, 44];
+const tips = bills.map(bill => calculateTip(bill));
+let totals = bills.map(bill => calculateTip(bill)+bill);
+console.log(totals);
+
